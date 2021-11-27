@@ -1,0 +1,31 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug in Firefox",
+			"type": "firefox",
+			"request": "launch",
+			"reAttach": true,
+			"port": 9222,
+            "url": "http://localhost:3000/index.html",
+            "pathMappings": [
+				{ "url": "http://localhost:3000", "path": "${workspaceFolder}/export/html5/bin"},
+				{  "url": "webpack:///./*", "path": "${workspaceFolder}/export/html5/bin/*" },
+				{ "url": "webpack:///file://*", "path": "*"},
+				{ "url": "webpack:///./*", "path": "${workspaceFolder}/export/html5/bin/*"},
+				{ "url": "webpack:///file://*", "path": "*"}
+			],
+			"linux": {
+				"firefoxExecutable": "/usr/bin/firefox",
+				"firefoxArgs": ["-start-debugger-server", "--remote-debugging-port 9222", "http://localhost:3000/index.html"]
+			},
+			"preLaunchTask": "Lime Webserver",
+			"postDebugTask": "Kill Lime Webserver"
+		},
+		{
+			"name": "Macro",
+			"type": "haxe-eval",
+			"request": "launch"
+		}
+	]
+}

@@ -1,0 +1,79 @@
+{
+
+	"lineEnds": {
+		"leftCurly": "after",
+		"rightCurly": "before",
+		"objectLiteralCurly": {
+		"leftCurly": "after"
+		}
+	},
+
+	"whitespace": {
+		"binopPolicy": "around",
+		"commaPolicy": "after",
+		"catchPolicy": "around",
+		"tryPolicy": "after",
+		"ifPolicy": "after",
+		"ternaryPolicy": "around",
+		"functionTypeHaxe4Policy": "before",
+		"functionTypeHaxe3Policy": "before",
+		"openingBracketPolicy": "after",
+		"closingBracketPolicy": "before",
+		"addLineCommentSpace": true,
+		"compressSuccessiveParenthesis": false,
+
+		"parenConfig": {
+
+			"callParens": {
+				"openingPolicy": "after",
+				"closingPolicy": "before",
+				"removeInnerWhenEmpty": true
+			},
+
+			"ifConditionParens": {
+				"openingPolicy": "after",
+				"closingPolicy": "before"
+			}
+
+		}
+	},
+
+	"indentation": {
+		"tabWidth": 4
+	},
+
+	"sameLine": {
+		"ifElse": "next",
+		"doWhile": "next",
+		"tryBody": "next",
+		"tryCatch": "next"
+	},
+
+	"emptyLines": {
+
+		"classEmptyLines": {
+			"existingBetweenFields": "keep",
+			"betweenVars": 0,
+			"betweenStaticVars": 0,
+			"afterPrivateVars": 0,
+			"afterVars": 0,
+			"afterStaticVars": 0
+		},
+
+		"maxAnywhereInFile": 1,
+		"afterLeftCurly": "keep"
+
+	},
+
+	"wrapping": {
+
+		"methodChain": {
+			"defaultAdditionalIndent": 4,
+			"defaultWrap":"onePerLine",
+			"defaultLocation": "afterLast"
+		},
+
+		"maxLineLength": 144
+
+	}
+}

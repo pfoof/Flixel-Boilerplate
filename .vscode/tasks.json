@@ -1,0 +1,36 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "lime",
+			"command": "test",
+			"group": "build",
+			"label": "lime: test (active configuration)"
+		},
+		{
+			"label": "Lime Webserver",
+			"command": "/usr/local/bin/lime",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"args": [
+				"run",
+				"html5",
+				"-nolaunch",
+				"-debug"
+			],
+			"isBackground": true,
+			"problemMatcher": "$lime-nolaunch",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Kill Lime Webserver",
+			"command": "/usr/bin/pkill",
+			"isBackground": true,
+			"args": ["lime"]
+		}
+	]
+}
